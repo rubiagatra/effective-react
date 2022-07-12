@@ -1,17 +1,34 @@
-import styled from 'styled-components';
+import { Link, Navigate, Route, Routes } from 'react-router-dom';
 
-const StyledApp = styled.div`
-  // Your style here
-`;
+// importing the UI library into our App
+import {
+  GlobalStyles,
+  Header,
+  Main,
+  NavigationItem,
+  NavigationList,
+} from '@effective-react/ui';
 
-export function App() {
+import { BooksFeature } from '@effective-react/books/feature';
+
+export const App = () => {
   return (
-    <StyledApp>
-      <header>
+    <>
+      <GlobalStyles />
+      <Header>
         <h1>Bookstore</h1>
-      </header>
-    </StyledApp>
+        <NavigationList>
+          <NavigationItem>
+            <Link to="/books">Books</Link>
+          </NavigationItem>
+        </NavigationList>
+      </Header>
+      <Main>
+        <Routes>
+          <Route path="/books" element={<BooksFeature />} />
+          <Route path="/" element={<Navigate to="/books" />} />
+        </Routes>
+      </Main>
+    </>
   );
-}
-
-export default App;
+};
