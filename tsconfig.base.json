@@ -15,7 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@effective-react/books/data-access": [
+        "libs/books/data-access/src/index.ts"
+      ],
       "@effective-react/books/feature": ["libs/books/feature/src/index.ts"],
+      "@effective-react/books/ui": ["libs/books/ui/src/index.ts"],
       "@effective-react/ui": ["libs/ui/src/index.ts"]
     }
   },

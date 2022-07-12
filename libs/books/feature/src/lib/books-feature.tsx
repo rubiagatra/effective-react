@@ -1,18 +1,21 @@
-import styled from 'styled-components';
+import { useEffect, useState } from 'react';
 
-/* eslint-disable-next-line */
-export interface BooksFeatureProps {}
+import { getBooks } from '@effective-react/books/data-access';
+import { Books } from '@effective-react/books/ui';
 
-const StyledBooksFeature = styled.div`
-  color: pink;
-`;
+export const BooksFeature = () => {
+  const [books, setBooks] = useState<any[]>([]);
 
-export function BooksFeature(props: BooksFeatureProps) {
+  useEffect(() => {
+    getBooks().then(setBooks);
+  }, []);
+
   return (
-    <StyledBooksFeature>
-      <h1>Welcome to BooksFeature!</h1>
-    </StyledBooksFeature>
+    <>
+      <h2>Books</h2>
+      <Books books={books} />
+    </>
   );
-}
+};
 
 export default BooksFeature;
