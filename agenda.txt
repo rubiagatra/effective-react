@@ -1,0 +1,10 @@
+1. Generate Nx Workspace
+2. Generate React Apps
+3. Explore  Nx cli: serve, build, lint, test, e2e, dep-graph
+4. Preparing for Development: New File Bookstore
+5. Create Books Feature Library, Run Book Feature Test
+6. Create UI library, add UI components, GlobalStyle, Button, Header, Main, NavigationList, NavigationItem
+7. Create Book Feature Data Access, UI, Books, and Book
+8. Enforcing Module Boundaries
+9. Update Books Feature with a New Column
+10. Working effectively in a monorepo: Dep Graph and Nx Affected
