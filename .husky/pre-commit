@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx nx lint web
+npx nx test web
+npx nx build web
+npx nx e2e web-e2e
